@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image To Text Converter</title>
+
+    <!-- v5 -->
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+
+    <!-- tailwind-css cdn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col justify-center items-center h-[100vh]">
+
+    <div class="shadow-xl shadow-gray-600 box-border max-w-[95%] sm:max-w-[400px] p-3 sm:p-5 text-center bg-gradient-to-r from-purple-700  to-gray-500 rounded-xl">
+        <h1 class="font-bold text-2xl">Image To Text Converter</h1>
+        <p class="mt-2"><strong>Note:</strong> Must upload an English image file</p>
+        <input class="border-2 border-gray-950 rounded-3xl mt-3 mb-3 w-full" type="file" id="fileInput" accept="image/*">
+        <button class="block mx-auto bg-stone-800 text-white py-2 px-6 font-bold rounded-tl-3xl rounded-br-3xl" onclick="findText()">Find Text</button>
+
+
+        <div id="outputDiv"></div>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
